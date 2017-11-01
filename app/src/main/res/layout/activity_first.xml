@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <!-- Toolbar is a standard toolbar for use within application content. -->
         <android.support.v7.widget.Toolbar
@@ -20,7 +21,7 @@
             android:layout_height="?attr/actionBarSize"
             android:title="@string/activity_first_toolbar_title"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
             app:layout_scrollFlags="scroll|enterAlways">
         </android.support.v7.widget.Toolbar>
 

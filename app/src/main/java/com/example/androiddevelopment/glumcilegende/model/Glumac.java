@@ -13,8 +13,8 @@ public class Glumac {
     private String image;
     private String imePrezime;
     private String biografija;
-    private Date datumRodjenja;
-    private Date datumSmrti;
+    private String datumRodjenja;
+    private String datumSmrti;
     private ArrayList<Film> filmovi;
 
     public Glumac() {
@@ -22,7 +22,7 @@ public class Glumac {
         this.filmovi = new ArrayList<>();
     }
 
-    public Glumac(int id, String image, String imePrezime, String biografija, Date datumRodjenja, Date datumSmrti, ArrayList<Film> filmovi) {
+    public Glumac(int id, String image, String imePrezime, String biografija, String datumRodjenja, String datumSmrti, ArrayList<Film> filmovi) {
         this.id = id;
         this.image = image;
         this.imePrezime = imePrezime;
@@ -64,19 +64,19 @@ public class Glumac {
         this.biografija = biografija;
     }
 
-    public Date getDatumRodjenja() {
+    public String getDatumRodjenja() {
         return datumRodjenja;
     }
 
-    public void setDatumRodjenja(Date datumRodjenja) {
+    public void setDatumRodjenja(String datumRodjenja) {
         this.datumRodjenja = datumRodjenja;
     }
 
-    public Date getDatumSmrti() {
+    public String getDatumSmrti() {
         return datumSmrti;
     }
 
-    public void setDatumSmrti(Date datumSmrti) {
+    public void setDatumSmrti(String datumSmrti) {
         this.datumSmrti = datumSmrti;
     }
 

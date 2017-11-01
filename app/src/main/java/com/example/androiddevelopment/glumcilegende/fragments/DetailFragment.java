@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ import com.example.androiddevelopment.glumcilegende.providers.GlumacProvider;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -67,11 +69,11 @@ public class DetailFragment extends Fragment {
 
         // datum roidjenja
         TextView tvDatumRodjenja = (TextView) getView().findViewById(R.id.tv_datumRodjenja);
-        tvDatumRodjenja.setText(GlumacProvider.getGlumacById(position).getDatumRodjenja() + "");
+        tvDatumRodjenja.setText(GlumacProvider.getGlumacById(position).getDatumRodjenja());
 
         // datum smrti
         TextView tvDatumSmrti = (TextView) getView().findViewById(R.id.tv_datumSmrti);
-        tvDatumSmrti.setText(GlumacProvider.getGlumacById(position).getDatumSmrti() + "");
+        tvDatumSmrti.setText(GlumacProvider.getGlumacById(position).getDatumSmrti());
 
         // lista filmova
         List<Film> films = (GlumacProvider.getGlumacById(position).getFilmovi());
@@ -80,13 +82,13 @@ public class DetailFragment extends Fragment {
         listView.setAdapter(itemsAdapter);
 
         // Finds "btnBuy" Button and sets "onClickListener" listener
-     /*   FloatingActionButton btnBuy = (FloatingActionButton) getView().findViewById(R.id.btn_buy);
+       FloatingActionButton btnBuy = (FloatingActionButton) getView().findViewById(R.id.btn_buy);
         btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showNotification();
             }
-        });*/
+        });
     }
 
     @Override
@@ -136,13 +138,13 @@ public class DetailFragment extends Fragment {
         TextView tvBiografija = (TextView) getView().findViewById(R.id.tv_biografija);
         tvBiografija.setText(GlumacProvider.getGlumacById(position).getBiografija());
 
-        // datum roidjenja
+        // datum rodjenja
         TextView tvDatumRodjenja = (TextView) getView().findViewById(R.id.tv_datumRodjenja);
-        tvDatumRodjenja.setText(GlumacProvider.getGlumacById(position).getDatumRodjenja() + "");
+        tvDatumRodjenja.setText(GlumacProvider.getGlumacById(position).getDatumRodjenja());
 
         // datum smrti
         TextView tvDatumSmrti = (TextView) getView().findViewById(R.id.tv_datumSmrti);
-        tvDatumSmrti.setText(GlumacProvider.getGlumacById(position).getDatumSmrti() + "");
+        tvDatumSmrti.setText(GlumacProvider.getGlumacById(position).getDatumSmrti());
 
         // lista filmova
         List<Film> films = (GlumacProvider.getGlumacById(position).getFilmovi());
@@ -150,14 +152,14 @@ public class DetailFragment extends Fragment {
         ListView listView = (ListView) getView().findViewById(R.id.lista_filmova_glumac);
         listView.setAdapter(itemsAdapter);
 
-       /* // Finds "btnBuy" Button and sets "onClickListener" listener
+       // Finds "btnBuy" Button and sets "onClickListener" listener
         FloatingActionButton btnBuy = (FloatingActionButton) getView().findViewById(R.id.btn_buy);
         btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showNotification();
             }
-        });*/
+        });
     }
     private void showNotification() {
         // Creates notification with the notification builder

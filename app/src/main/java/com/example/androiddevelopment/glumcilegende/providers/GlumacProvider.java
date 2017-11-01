@@ -23,9 +23,9 @@ public class GlumacProvider {
 
 
         List<Glumac> glumci = new ArrayList<>();
-        glumci.add(new Glumac(0, "velimir.jpg", "Velimir Bata Zivojinovic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Najpoznatiji jugoslovenski glumac po ulogama u partizanskim filmovima vezanim za Drugi svetski rat...", new Date(1933,06,05), new Date(2016,05,16), filmovi));
-        glumci.add(new Glumac(1, "dragan.jpg", "Dragan Gaga Nikolic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Važio je za predstavnika beogradskog šarma, šmekera sa karakterom gospodina, nacionalnu klasu, jednog od najvećih frajera YU filma...", new Date(1943,8,20), new Date(2016,03,11), filmovi));
-        glumci.add(new Glumac(2, "zoran.jpg", "Zoran Radmilovic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Jedan od najboljih i najvoljenijih glumaca, kao i jedan od najvećih komičara sa ovih prostora...", new Date(1933,05,11), new Date(1985,07,21), filmovi));
+        glumci.add(new Glumac(0, "velimir.jpg", "Velimir Bata Zivojinovic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Najpoznatiji jugoslovenski glumac po ulogama u partizanskim filmovima vezanim za Drugi svetski rat...", " rodjen 05.06.1933", " preminuo 16.05.2016", filmovi));
+        glumci.add(new Glumac(1, "dragan.jpg", "Dragan Gaga Nikolic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Važio je za predstavnika beogradskog šarma, šmekera sa karakterom gospodina, nacionalnu klasu, jednog od najvećih frajera YU filma...", " rodjen 20.08.1943", " preminuo 11.03.2016", filmovi));
+        glumci.add(new Glumac(2, "zoran.jpg", "Zoran Radmilovic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Jedan od najboljih i najvoljenijih glumaca, kao i jedan od najvećih komičara sa ovih prostora...", " rodjen 11.05.1933"," preminuo 21.07.1985", filmovi));
 
         return glumci;
     }
@@ -49,11 +49,11 @@ public class GlumacProvider {
 
         switch (id) {
             case 0:
-                return new Glumac(0, "velimir.jpg", "Velimir Bata Zivojinovic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Bio je najpoznatiji jugoslovenski glumac po ulogama u partizanskim filmovima vezanim za Drugi svetski rat.", new Date(1933,06,05), new Date(2016,05,16), filmovi);
+                return new Glumac(0, "velimir.jpg", "Velimir Bata Zivojinovic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Bio je najpoznatiji jugoslovenski glumac po ulogama u partizanskim filmovima vezanim za Drugi svetski rat.", "05.06.1933", "16.05.2016", filmovi);
             case 1:
-                return new Glumac(1, "dragan.jpg", "Dragan Gaga Nikolic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Važio je za predstavnika beogradskog šarma, šmekera sa karakterom gospodina, nacionalnu klasu, jednog od najvećih frajera YU filma...", new Date(1943,8,20), new Date(2016,03,11), filmovi);
+                return new Glumac(1, "dragan.jpg", "Dragan Gaga Nikolic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Važio je za predstavnika beogradskog šarma, šmekera sa karakterom gospodina, nacionalnu klasu, jednog od najvećih frajera YU filma...", "20.08.1943", "11.03.2016", filmovi);
             case 2:
-                return new Glumac(2, "zoran.jpg", "Zoran Radmilovic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Jedan od najboljih i najvoljenijih glumaca, kao i jedan od najvećih komičara sa ovih prostora...", new Date(1933,05,11), new Date(1985,07,21), filmovi);
+                return new Glumac(2, "zoran.jpg", "Zoran Radmilovic", "Bio je jugoslovenski i srpski pozorišni, televizijski i filmski glumac. Jedan od najboljih i najvoljenijih glumaca, kao i jedan od najvećih komičara sa ovih prostora...", "11.05.1933","21.07.1985", filmovi);
             default:
                 return null;
         }

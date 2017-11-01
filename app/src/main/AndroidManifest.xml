@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- In principle, each app should have a unique package -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androiddevelopment.glumcilegende">
+
+    <!-- Declares that the app needs a permission to access internet -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -16,8 +19,8 @@
 
             android:name=".activities.FirstActivity"
             android:label="@string/activity_first_name"
-            android:icon="@mipmap/ic_launcher"
-            android:theme="@style/AppTheme">
+            android:icon="@mipmap/ic_launcher_glumac"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,9 +29,9 @@
         <!-- Declares SettingsActivity (the activity used to set app preferences). -->
         <activity
             android:name=".activities.SettingsActivity"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@mipmap/ic_launcher_glumac"
             android:label="@string/activity_settings_name"
-            android:theme="@style/AppTheme"
+            android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".activities.FirstActivity">
 
         </activity>

@@ -4,6 +4,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -291,6 +292,7 @@ public class FirstActivity extends AppCompatActivity implements ListFragment.OnI
                 break;
             case R.id.action_delete:
                 Toast.makeText(this, "Action " + getString(R.string.fragment_detal_action_delete) + " executed.", Toast.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(R.id.list_view), "test", Snackbar.LENGTH_SHORT).show();
                 break;
         }
 
